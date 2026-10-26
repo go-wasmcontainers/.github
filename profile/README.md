@@ -15,23 +15,24 @@ Engine API, so existing API clients work too. The same engine runs inside a
 browser tab, which makes a lab a web page rather than a virtual machine to
 provision: **[try it in your browser](https://go-wasmcontainers.github.io/playground/)**.
 
-> **Status: engine v0.9.0 is released and the playground is live.** The engine
+> **Status: engine v0.10.0 is released and the playground is live.** The engine
 > runs natively with a wazero executor (`wctr pull`, `images`, `run`, `ps`,
 > `logs`, `rm`, `rmi`, `inspect`, `kill`, `start`, `stop`, `restart`, `diff`,
-> `events`, `stats`, `volume`, `system df`, `system prune`, `version` and
+> `events`, `stats`, `volume`, `network`, `system df`, `system prune`, `version` and
 > `completion` for bash, zsh, fish and PowerShell; install with
-> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.9.0`); v0.2.0
+> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.10.0`); v0.2.0
 > added the browser executor, v0.3.0 the `cli/lineedit` line editor, v0.4.0
 > made containers survive a `wctrd` restart and a page reload, v0.6.0 added
 > events, v0.7.0 stats (CPU is not measured) and v0.8.0 named volumes, and v0.9.0 pulls `tar+zstd`
-> layers and enables WebAssembly exception handling. The playground runs
+> layers and enables WebAssembly exception handling, and v0.10.0 adds networking
+> (sockets for guests, DNS by container name, networks), which is **not live in
+> the playground yet**. The playground runs
 > engine v0.9.0 in a tab with no server (`start`, `stop`, `restart`, `diff`,
 > `stats`, `events`, volumes, `system df|prune`, and the C tools `lua`,
 > `sqlite3` and `minigzip` built by go-pkgx for wasip1), works offline, and keeps its
-> containers across reloads (playground v0.2.0). No networking, `exec`, attach,
+> containers across reloads (playground v0.2.0). No `exec`, attach,
 > build, stdin or shell yet. Everything else on this
-> page is **planned**, not shipped: container networking
-> (the WasmEdge socket ABI), a shell and `exec` (a WASIX subset), building from a
+> page is **planned**, not shipped: networking in the playground, a shell and `exec` (a WASIX subset), building from a
 > Dockerfile, Compose, and a mini-Kubernetes. Images are meant to be apt-like,
 > built from [pkgx](https://github.com/go-pkgx) `wasip1` bottles (the
 > `wasip1/wasm` target is itself being added to go-pkgx).
