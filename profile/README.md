@@ -11,16 +11,18 @@ A container here is a `wasip1/wasm` module: the image is an OCI image with
 [wazero](https://wazero.io) instead of a Linux kernel. The engine is the
 `wctrd` daemon and its command line is `wctr`; `wctrd` listens on
 `/var/run/wctr.sock` (`WCTR_HOST` points `wctr` elsewhere) and speaks the Docker
-Engine API, so existing API clients work too. The same executor model is meant
-to run inside a browser worker, which is what would make a lab a web page rather
-than a virtual machine to provision.
+Engine API, so existing API clients work too. The same engine runs inside a
+browser tab, which makes a lab a web page rather than a virtual machine to
+provision: **[try it in your browser](https://go-wasmcontainers.github.io/playground/)**.
 
-> **Status: engine v0.1.0 (milestone M1) is released.** Native, wazero
-> executor: `wctr pull`, `images`, `run`, `ps`, `logs`, `rm`, `rmi`, `inspect`,
-> `kill` and `version`; install with
-> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.1.0`. No
-> networking, `exec`, attach or build yet. Everything else on this
-> page is **planned**, not shipped: the browser playground, container networking
+> **Status: engine v0.2.0 is released and the playground is live.** The engine
+> runs natively with a wazero executor (`wctr pull`, `images`, `run`, `ps`,
+> `logs`, `rm`, `rmi`, `inspect`, `kill` and `version`; install with
+> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.2.0`), and v0.2.0
+> adds the browser executor. The playground runs the same commands in a tab
+> with no server; it has no release tag yet. No networking, `exec`, attach,
+> build, stdin or shell yet. Everything else on this
+> page is **planned**, not shipped: container networking
 > (the WasmEdge socket ABI), a shell and `exec` (a WASIX subset), building from a
 > Dockerfile, Compose, and a mini-Kubernetes. Images are meant to be apt-like,
 > built from [pkgx](https://github.com/go-pkgx) `wasip1` bottles (the
@@ -31,7 +33,7 @@ than a virtual machine to provision.
 | Repo | What it is |
 |------|------------|
 | [**engine**](https://github.com/go-wasmcontainers/engine) | the `wctrd` daemon and `wctr` command: a container engine for WASI (wasip1) workloads, pure Go |
-| [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: a `wctr` terminal running WASI containers (planned; not started) |
+| [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: a `wctr` terminal running WASI containers, [live](https://go-wasmcontainers.github.io/playground/) |
 | [**docs**](https://github.com/go-wasmcontainers/docs) | the documentation site (Hugo + Hextra), served at [/docs/](https://go-wasmcontainers.github.io/docs/) |
 | [**go-wasmcontainers.github.io**](https://github.com/go-wasmcontainers/go-wasmcontainers.github.io) | the landing page (Hugo) |
 | [**brand**](https://github.com/go-wasmcontainers/brand) | logo, icons and social images |
