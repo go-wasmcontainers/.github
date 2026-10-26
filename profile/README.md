@@ -15,11 +15,13 @@ Engine API, so existing API clients work too. The same engine runs inside a
 browser tab, which makes a lab a web page rather than a virtual machine to
 provision: **[try it in your browser](https://go-wasmcontainers.github.io/playground/)**.
 
-> **Status: engine v0.2.0 is released and the playground is live.** The engine
+> **Status: engine v0.3.0 is released and the playground is live.** The engine
 > runs natively with a wazero executor (`wctr pull`, `images`, `run`, `ps`,
-> `logs`, `rm`, `rmi`, `inspect`, `kill` and `version`; install with
-> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.2.0`), and v0.2.0
-> adds the browser executor. The playground runs the same commands in a tab
+> `logs`, `rm`, `rmi`, `inspect`, `kill`, `version` and `completion` for bash,
+> zsh, fish and PowerShell; install with
+> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.3.0`); v0.2.0
+> added the browser executor and v0.3.0 the `cli/lineedit` line editor, which
+> gives the playground terminal Tab completion and bash-style editing. The playground runs the same commands in a tab
 > with no server (playground v0.1.0). No networking, `exec`, attach,
 > build, stdin or shell yet. Everything else on this
 > page is **planned**, not shipped: container networking
