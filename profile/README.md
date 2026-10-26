@@ -28,7 +28,7 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 > engine v0.9.0 in a tab with no server (`start`, `stop`, `restart`, `diff`,
 > `stats`, `events`, volumes, `system df|prune`, and the C tools `lua`,
 > `sqlite3` and `minigzip` built by go-pkgx for wasip1), works offline, and keeps its
-> containers across reloads (playground v0.1.0). No networking, `exec`, attach,
+> containers across reloads (playground v0.2.0). No networking, `exec`, attach,
 > build, stdin or shell yet. Everything else on this
 > page is **planned**, not shipped: container networking
 > (the WasmEdge socket ABI), a shell and `exec` (a WASIX subset), building from a
