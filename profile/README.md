@@ -20,7 +20,7 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 > `logs`, `rm`, `rmi`, `inspect`, `kill` and `version`; install with
 > `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.2.0`), and v0.2.0
 > adds the browser executor. The playground runs the same commands in a tab
-> with no server; it has no release tag yet. No networking, `exec`, attach,
+> with no server (playground v0.1.0). No networking, `exec`, attach,
 > build, stdin or shell yet. Everything else on this
 > page is **planned**, not shipped: container networking
 > (the WasmEdge socket ABI), a shell and `exec` (a WASIX subset), building from a
