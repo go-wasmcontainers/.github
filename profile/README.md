@@ -15,9 +15,11 @@ Engine API, so existing API clients work too. The same executor model is meant
 to run inside a browser worker, which is what would make a lab a web page rather
 than a virtual machine to provision.
 
-> **Status: work in progress, nothing is released yet.** The engine's first
-> milestone (M1, native, wazero executor) is under way: `wctr pull`, `run`,
-> `ps`, `logs`, `rm`, `rmi`, `inspect` and `images`. Everything else on this
+> **Status: engine v0.1.0 (milestone M1) is released.** Native, wazero
+> executor: `wctr pull`, `images`, `run`, `ps`, `logs`, `rm`, `rmi`, `inspect`,
+> `kill` and `version`; install with
+> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.1.0`. No
+> networking, `exec`, attach or build yet. Everything else on this
 > page is **planned**, not shipped: the browser playground, container networking
 > (the WasmEdge socket ABI), a shell and `exec` (a WASIX subset), building from a
 > Dockerfile, Compose, and a mini-Kubernetes. Images are meant to be apt-like,
