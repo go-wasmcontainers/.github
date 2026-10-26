@@ -41,7 +41,7 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 | Repo | What it is |
 |------|------------|
 | [**engine**](https://github.com/go-wasmcontainers/engine) | the `wctrd` daemon and `wctr` command: a container engine for WASI (wasip1) workloads, pure Go |
-| [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: a `wctr` terminal running WASI containers, [live](https://go-wasmcontainers.github.io/playground/) |
+| [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: a `wctr` terminal and, by default on the live site, the dashboard, running WASI containers, [live](https://go-wasmcontainers.github.io/playground/) |
 | [**dashboard**](https://github.com/go-wasmcontainers/dashboard) | a graphical dashboard for the engine (containers, images, volumes and a `wctr` terminal), built with go-widgets, in the browser; [live demo](https://go-wasmcontainers.github.io/dashboard/) |
 | [**docs**](https://github.com/go-wasmcontainers/docs) | the documentation site (Hugo + Hextra), served at [/docs/](https://go-wasmcontainers.github.io/docs/) |
 | [**go-wasmcontainers.github.io**](https://github.com/go-wasmcontainers/go-wasmcontainers.github.io) | the landing page (Hugo) |
