@@ -43,6 +43,11 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 |------|------------|
 | [**engine**](https://github.com/go-wasmcontainers/engine) | the `wctrd` daemon and `wctr` command: a container engine for WASI (wasip1) workloads, pure Go |
 | [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: a `wctr` terminal and, by default on the live site, the dashboard, running WASI containers, [live](https://go-wasmcontainers.github.io/playground/) |
+| [**relay**](https://github.com/go-wasmcontainers/relay) | the classroom relay and firewall (`wctr-relay`), security groups modelled on OpenStack Neutron; v0.3.0 adds `--cors-origin` |
+| [**build**](https://github.com/go-wasmcontainers/build) | `wctr build`: images from a Containerfile (build v0.2.0, standalone `wctr-build`; shell-form `RUN` is in progress) |
+| [**compose**](https://github.com/go-wasmcontainers/compose) | `wctr compose`: multi-container applications from Compose files in YAML, JSON or HCL2 (compose v0.1.0, standalone `wctr-compose`) |
+| [**shell**](https://github.com/go-wasmcontainers/shell) | a POSIX shell for WASI containers: the guest side exists, the engine's process spawning is in progress (no release) |
+| [**gpu**](https://github.com/go-wasmcontainers/gpu) | ONNX models on the CPU in pure Go (gpu v0.1.0); GPU inference, compute and rendering are planned |
 | [**dashboard**](https://github.com/go-wasmcontainers/dashboard) | a graphical dashboard for the engine (containers, images, volumes and a `wctr` terminal), built with go-widgets, in the browser; [live demo](https://go-wasmcontainers.github.io/dashboard/) |
 | [**docs**](https://github.com/go-wasmcontainers/docs) | the documentation site (Hugo + Hextra), served at [/docs/](https://go-wasmcontainers.github.io/docs/) |
 | [**go-wasmcontainers.github.io**](https://github.com/go-wasmcontainers/go-wasmcontainers.github.io) | the landing page (Hugo) |
