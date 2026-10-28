@@ -15,18 +15,19 @@ Engine API, so existing API clients work too. The same engine runs inside a
 browser tab, which makes a lab a web page rather than a virtual machine to
 provision: **[try it in your browser](https://go-wasmcontainers.github.io/playground/)**.
 
-> **Status: engine v0.10.0 is released and the playground is live.** The engine
+> **Status: engine v0.12.0 is released and the playground is live.** The engine
 > runs natively with a wazero executor (`wctr pull`, `images`, `run`, `ps`,
 > `logs`, `rm`, `rmi`, `inspect`, `kill`, `start`, `stop`, `restart`, `diff`,
-> `events`, `stats`, `volume`, `network`, `system df`, `system prune`, `version` and
+> `events`, `stats`, `volume`, `network`, `commit`, `tag`, `system df`, `system prune`, `version` and
 > `completion` for bash, zsh, fish and PowerShell; install with
-> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.10.0`); v0.2.0
+> `go install github.com/go-wasmcontainers/engine/cmd/wctr@v0.12.0`); v0.2.0
 > added the browser executor, v0.3.0 the `cli/lineedit` line editor, v0.4.0
 > made containers survive a `wctrd` restart and a page reload, v0.6.0 added
 > events, v0.7.0 stats (CPU is not measured) and v0.8.0 named volumes, and v0.9.0 pulls `tar+zstd`
 > layers and enables WebAssembly exception handling, and v0.10.0 adds networking
 > (sockets for guests, DNS by container name, networks), which is **not live in
-> the playground yet**. The playground runs
+> the playground yet**, v0.11.0 lets a class network be joined at run time, and
+> v0.12.0 adds `commit`, `tag` and what builders need. The playground runs
 > engine v0.9.0 in a tab with no server (`start`, `stop`, `restart`, `diff`,
 > `stats`, `events`, volumes, `system df|prune`, and the C tools `lua`,
 > `sqlite3` and `minigzip` built by go-pkgx for wasip1), works offline, and keeps its
