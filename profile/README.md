@@ -30,9 +30,9 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 > runs a dashboard and `wctr` in a tab with no server, with networking, Join
 > class and wasi-nn, works offline, and keeps its containers across reloads. No
 > attach, no `-p` in the browser yet (in progress), and no shell, stdin or `exec`
-> in the playground. The shell's base image
-> (`ghcr.io/go-wasmcontainers/shell:0.1.0`) is not public yet. Everything else on
-> the roadmap is **planned**, not shipped: a mini-Kubernetes.
+> in the playground. The shell's base image is public:
+> `wctr pull ghcr.io/go-wasmcontainers/shell:0.1.0`. Everything else on the
+> roadmap is **planned**, not shipped: a mini-Kubernetes.
 
 ## Repositories
 
@@ -42,8 +42,8 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 | [**playground**](https://github.com/go-wasmcontainers/playground) | In-browser container playground: the dashboard and a `wctr` terminal running WASI containers, [live](https://go-wasmcontainers.github.io/playground/) (v0.3.0) |
 | [**relay**](https://github.com/go-wasmcontainers/relay) | the classroom relay and firewall (`wctr-relay`), security groups modelled on OpenStack Neutron (v0.3.1; `--cors-origin`) |
 | [**build**](https://github.com/go-wasmcontainers/build) | `wctr build`: images from a Containerfile, shell-form `RUN` and live step output (v0.4.0, built into `wctr`) |
-| [**compose**](https://github.com/go-wasmcontainers/compose) | `wctr compose`: multi-container applications from Compose files in YAML, JSON or HCL2, with service-name networking (v0.3.1, built into `wctr`) |
-| [**shell**](https://github.com/go-wasmcontainers/shell) | a POSIX shell for WASI containers and its base image with the coreutils (v0.1.0; the image package becomes public soon) |
+| [**compose**](https://github.com/go-wasmcontainers/compose) | `wctr compose`: multi-container applications from Compose files in YAML, JSON or HCL2, with service-name networking (v0.3.2, built into `wctr`) |
+| [**shell**](https://github.com/go-wasmcontainers/shell) | a POSIX shell for WASI containers and its base image with the coreutils (v0.1.0; the image `ghcr.io/go-wasmcontainers/shell:0.1.0` is public) |
 | [**gpu**](https://github.com/go-wasmcontainers/gpu) | wasi-nn on the CPU and on WebGPU, wasi:webgpu compute and rendering to surfaces (v0.5.0) |
 | [**dashboard**](https://github.com/go-wasmcontainers/dashboard) | a graphical dashboard for the engine (containers, images, volumes, networks, GPU surfaces and a `wctr` terminal), built with go-widgets, in the browser (v0.6.0); [live demo](https://go-wasmcontainers.github.io/dashboard/) |
 | [**docs**](https://github.com/go-wasmcontainers/docs) | the documentation site (Hugo + Hextra), served at [/docs/](https://go-wasmcontainers.github.io/docs/) |
