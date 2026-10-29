@@ -35,6 +35,18 @@
       ],
       "automerge": false,
       "groupName": null
+    },
+    {
+      "description": [
+        "playwright-go v0.6100.0 and later cannot be required: their go.mod declares the module path github.com/mxschmitt/playwright-go, so `go get`/`go mod tidy` fail with 'module declares its path as: github.com/mxschmitt/playwright-go but was required as: github.com/playwright-community/playwright-go' (reproduced 2026-10-29 on v0.6100.0, v0.6201.0 and v0.6201.1; v0.6000.0 resolves). Renovate nevertheless proposed v0.6201.1 in gpu, dashboard, relay and playground, and each of those branches failed with 'renovate/artifacts: Artifact file update failure' and a red build. Cap the version until upstream fixes the path; lift this rule when a newer release resolves."
+      ],
+      "matchDatasources": [
+        "go"
+      ],
+      "matchDepNames": [
+        "github.com/playwright-community/playwright-go"
+      ],
+      "allowedVersions": "<0.6100.0"
     }
   ]
 }
