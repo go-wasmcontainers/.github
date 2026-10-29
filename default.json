@@ -4,6 +4,21 @@
     "config:recommended",
     ":semanticCommits"
   ],
+  "description": [
+    "ignorePaths: the list of config:recommended's :ignoreModulesAndTests preset (node_modules, bower_components, vendor, examples, __tests__, test, tests, __fixtures__), restated because setting ignorePaths replaces it, plus **/testdata/** and **/third_party/**. Those two hold fixtures copied verbatim from upstream (build: BuildKit Dockerfiles whose FROM lines the parser tests compare against; shell: a vendored mvdan-sh tree) and test programs compiled to wasm; bumping them rewrites expected outputs or a vendored copy, and the dashboards listed them as 'updates' (build#7/#8, shell#5, compose's localhost:5000/db lookup failure). A repository that needs one of them updated sets its own ignorePaths."
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**",
+    "**/testdata/**",
+    "**/third_party/**"
+  ],
   "postUpdateOptions": [
     "gomodTidy",
     "gomodUpdateImportPaths"
