@@ -33,7 +33,7 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 > works offline, and keeps its containers across reloads. No `run -i` in the
 > playground yet (it is built on engine v0.27.2), and no `-p` in the browser: its
 > second origin is deployed, but `-p` is not live. The shell's base image is public:
-> `wctr pull ghcr.io/go-wasmcontainers/shell:0.1.0`. Everything else on the
+> `wctr pull ghcr.io/go-wasmcontainers/shell:0.2.0`. Everything else on the
 > roadmap is **planned**, not shipped: a mini-Kubernetes.
 
 ## Repositories
@@ -45,7 +45,7 @@ provision: **[try it in your browser](https://go-wasmcontainers.github.io/playgr
 | [**relay**](https://github.com/go-wasmcontainers/relay) | the classroom relay and firewall (`wctr-relay`), security groups modelled on OpenStack Neutron (v0.3.1; `--cors-origin`) |
 | [**build**](https://github.com/go-wasmcontainers/build) | `wctr build`: images from a Containerfile, shell-form `RUN` and live step output (v0.4.0, built into `wctr`) |
 | [**compose**](https://github.com/go-wasmcontainers/compose) | `wctr compose`: multi-container applications from Compose files in YAML, JSON or HCL2, with service-name networking, published ports, restart policies and health checks (v0.6.0, built into `wctr`) |
-| [**shell**](https://github.com/go-wasmcontainers/shell) | a POSIX shell for WASI containers and its base image with the coreutils (v0.2.0: a line editor and `wasix/exec`; the image `ghcr.io/go-wasmcontainers/shell:0.1.0` is public) |
+| [**shell**](https://github.com/go-wasmcontainers/shell) | a POSIX shell for WASI containers and its base image with the coreutils (v0.2.0: a line editor and `wasix/exec`; the image `ghcr.io/go-wasmcontainers/shell:0.2.0`, with coreutils v0.4.0, is public) |
 | [**gpu**](https://github.com/go-wasmcontainers/gpu) | wasi-nn on the CPU and on WebGPU, wasi:webgpu compute and rendering to surfaces and surface input (v0.6.0) |
 | [**dashboard**](https://github.com/go-wasmcontainers/dashboard) | a graphical dashboard for the engine (containers, images, volumes, networks, GPU surfaces and a `wctr` terminal), built with go-widgets, in the browser (v0.7.0, with Open shell); [live demo](https://go-wasmcontainers.github.io/dashboard/) |
 | [**docs**](https://github.com/go-wasmcontainers/docs) | the documentation site (Hugo + Hextra), served at [/docs/](https://go-wasmcontainers.github.io/docs/) |
